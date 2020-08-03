@@ -1,0 +1,4 @@
+.idea/
+application/.idea/
+application/__pycache__/
+application/venv
