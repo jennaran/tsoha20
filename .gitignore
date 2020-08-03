@@ -2,3 +2,4 @@
 application/.idea/
 application/__pycache__/
 application/venv
+application/.env
