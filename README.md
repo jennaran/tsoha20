@@ -27,3 +27,5 @@ Voit lähettää viestin ryhmään (mutta sitten tulee valitettavasti ongelmia,
 joista pääset eroon menemällä yhden sivun taaksepäin selaimessa..).
 Sisään kirjautuessa voit myös etsiä muiden käyttäjien ryhmiä (painamalla nappulaa),
 joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'ryhmä')
+Muiden ryhmiin ei voi lähettää viestejä. 
+
