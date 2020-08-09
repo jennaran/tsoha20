@@ -1,0 +1,77 @@
+.main-section{
+	margin: auto;
+}
+
+.head-sub{
+	padding: 18px;
+	text-align: center;
+	align: center;
+	background: #e0cfbb;
+}
+.head-sub input{
+	width: 60%;
+	height: 37%;
+	border-radius: 0px;
+	border:1px solid #E6E6E6;
+	padding: 7px;
+}
+.head-sub button{
+	background: #c7928f;
+	color: #4e3131;
+	border:1px solid #c7928f;
+	border-radius: 8px;
+	padding: 12px 16px;
+}
+.body-section{
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+}
+.body-sub{
+	height: 500px;
+	border-right:1px solid #fffcf7;
+	background-color: #fffcf7;
+	z-index: 1;
+	position: relative;
+}
+.body-sub ul{
+    padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.body-sub nav ul{
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.body-sub ul li{
+	padding: 10px 15px;
+	cursor: pointer;
+}
+.body-sub ul li:active{
+	background: #c78f8f;
+	color: #fff;
+	position: relative;
+}
+.body-sub .chatList{
+	overflow: hidden;
+}
+.body-sub .chatList .img{
+	width: 60px;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.body-sub .chatList .img img{
+	width: 30px;
+	border-radius: 50%;
+}
+
+.body-sub .chatList .desc{
+	width: calc(100% - 60px);
+	float: left;
+	position: relative;
+}
+.body-sub .chatList .desc h4{
+	margin-top: 6px;
+}

@@ -3,3 +3,5 @@ application/.idea/
 application/__pycache__/
 application/venv
 application/.env
+application/SQL/__pycache__/
+application/static/index.html

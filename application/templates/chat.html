@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat{% endblock %}
+
+{% block head1 %}
+<link href="../static/chat.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content1 %}
+    <div class="nav-bar-login-sub">
+        <button onclick="location.href='/'"> <i class="Sign in">Dunno really..</i></button>
+    </div>
+{% endblock %}
+
+{% block content2 %}
+    <div class="main-section">
+        <div class="head-section">
+            <div class="head-sub">
+                <h3>{{ name[0] }}</h3>
+                <small></small>
+            </div>
+        </div>
+        <div class="body-section">
+            <div class="message">
+                <nav>
+                    <ul>
+                        {% for message in messages %}
+                            <li class="msg-right">
+                                <div class="msg-right-sub">
+                                    <div class="msg-desc">
+                                        <b>{{ message[0] }}</b>
+                                        <p>{{ message[1] }}</p>
+                                    </div>
+                                    <small>{{ message[2] }}</small>
+                                </div>
+                            </li>
+
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="body-bottom">
+                <form action="/messages/{{ id }}" method="post">
+                    <div class="upload-btn">
+                        <input type="text" name="content" placeholder="Type here...">
+                        <button class="btn-send" type="submit" value="send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

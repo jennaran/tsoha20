@@ -1,0 +1,14 @@
+.main-login {
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	padding: 10px;
+  	overflow: auto;
+}
+
+.nav-bar-login-sub button{
+	float: right;
+	padding-left: 10px;
+}

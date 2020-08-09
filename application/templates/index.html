@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}App{% endblock %}
+
+{% block head1 %}
+<link href="static/index.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content1 %}
+    <div class="nav-bar-login-sub">
+        <button onclick="location.href='/logout'"> <i class="Sign in">Sign out</i></button>
+    </div>
+{% endblock %}
+{% block content2 %}
+    <div class="main-section">
+        <div class="head-section">
+            <div class="head-sub">
+                <form action="/search">
+                    <input type="text" name="query" placeholder="Search for new chats..">
+                    <button type="submit"> <i class="search-button"></i>Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="body-section">
+            <div class="body-sub">
+                <nav>
+                    <ul>
+                        {% for group in groups %}
+                        <li onclick="location.href = '/messages/{{ group[1] }}'">
+                            <div class="chatList">
+                                <div class="desc">
+                                    <h4>{{group[0]}}</h4>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+{% endblock %}
