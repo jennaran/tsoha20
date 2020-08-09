@@ -63,6 +63,10 @@ def chat(id):
     if request.method == "POST":
         content = request.form['content']
         if messages.send(content, id):
-            return redirect("/messages", (id))
+            list = messages.get_messages(id)
+            name = groups.get_name(id)
+            return render_template("chat.html", name=name[0], messages=list, id=id)
+            #return redirect("/messages", (id))
         else:
             return render_template("error.html", message="Failed to send the message")
+#TODO: chat oikeaan kokoon
