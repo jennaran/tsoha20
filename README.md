@@ -23,8 +23,7 @@ Käyttäjät voivat etsiä toisten käyttäjien luomia chattejä kirjoittamalla 
 Voit luoda tilin ja kirjautua sillä sisään. 
 Sisään kirjautuessa näät listan ryhmistä, joiden jäsen olet. 
 Ryhmää klikkaamalla näet ryhmässä lähetetyt viestit. 
-Voit lähettää viestin ryhmään (mutta sitten tulee valitettavasti ongelmia,
-joista pääset eroon menemällä yhden sivun taaksepäin selaimessa..).
+Voit lähettää viestin ryhmään.
 Sisään kirjautuessa voit myös etsiä muiden käyttäjien ryhmiä (painamalla nappulaa),
 joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'ryhmä')
 Muiden ryhmiin ei voi lähettää viestejä. 
