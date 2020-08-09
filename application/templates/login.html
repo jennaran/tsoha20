@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+{% block head1 %}<link href="static/login.css" rel="stylesheet" type="text/css">{% endblock %}
+
+{% block content1 %}
+    <div class="nav-bar-login-sub">
+        <button> <i class="Sign in">Login</i></button>
+    </div>
+{% endblock %}
+
+{% block content2 %}
+
+    <div class="main-login">
+        <h2>Sign in</h2>
+        <div main-login-sub>
+            <form action="/login" method="POST">
+                <div class="username-group">
+                    <label>User name</label>
+                    <input type="text" placeholder="User name">
+                </div>
+                <div class="password-group">
+                    <label>Password</label>
+                    <input type="text" placeholder="Password">
+                </div>
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
