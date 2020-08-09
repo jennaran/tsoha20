@@ -16,3 +16,14 @@ Käyttäjät voivat luoda chattejä. Chatin luojasta tulee automaattisesti chati
 ### Chattien haku
 
 Käyttäjät voivat etsiä toisten käyttäjien luomia chattejä kirjoittamalla hakukenttään chatin nimen tai tägin(/tägejä?). Näin ilmestyy lista hakua vastaavista ryhmistä. Listassa on tieto ryhmän nimestä, sen kuvaus ja jäsenten määrä. Liity ryhmään, niin näet keskustelun ja pääset itse osallistumaan siihen. Ryhmästä on mahdollista poistua myöhemmin. 
+
+
+# Nykyinen tila:
+
+Voit luoda tilin ja kirjautua sillä sisään. 
+Sisään kirjautuessa näät listan ryhmistä, joiden jäsen olet. 
+Ryhmää klikkaamalla näet ryhmässä lähetetyt viestit. 
+Voit lähettää viestin ryhmään (mutta sitten tulee valitettavasti ongelmia,
+joista pääset eroon menemällä yhden sivun taaksepäin selaimessa..).
+Sisään kirjautuessa voit myös etsiä muiden käyttäjien ryhmiä (painamalla nappulaa),
+joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'ryhmä')
