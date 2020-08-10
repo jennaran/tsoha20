@@ -28,4 +28,4 @@ Sisään kirjautuessa voit myös etsiä muiden käyttäjien ryhmiä (painamalla 
 joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'ryhmä')
 Muiden ryhmiin ei voi lähettää viestejä. 
 
-HEROKU: https://tsoha-chatapp1.herokuapp.com/ (ei toimi)
+HEROKU: https://tsoha-chatapp1.herokuapp.com/
