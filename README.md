@@ -29,7 +29,10 @@ joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'testi')
 Muiden ryhmiin ei voi lähettää viestejä. 
 
 Kokeile:
+
 Username: Nimi
+
 Password: salasana
+
 
 HEROKU: https://tsoha-chatapp1.herokuapp.com/
