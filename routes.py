@@ -66,7 +66,7 @@ def chat(id):
             list = messages.get_messages(id)
             name = groups.get_name(id)
             return render_template("chat.html", name=name[0], messages=list, id=id)
+            #TODO: redirect ("/messages", (id)) ...
             #return redirect("/messages", (id))
         else:
             return render_template("error.html", message="Failed to send the message")
-#TODO: chat oikeaan kokoon
