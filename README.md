@@ -25,7 +25,11 @@ Sisään kirjautuessa näät listan ryhmistä, joiden jäsen olet.
 Ryhmää klikkaamalla näet ryhmässä lähetetyt viestit. 
 Voit lähettää viestin ryhmään.
 Sisään kirjautuessa voit myös etsiä muiden käyttäjien ryhmiä (painamalla nappulaa),
-joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'ryhmä')
+joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'testi')
 Muiden ryhmiin ei voi lähettää viestejä. 
+
+Kokeile:
+Username: Nimi
+Password: salasana
 
 HEROKU: https://tsoha-chatapp1.herokuapp.com/
