@@ -29,6 +29,9 @@
 	width: 90%;
 	overflow:hidden;
 }
+.message ul > li {
+    transform: rotate(-180deg);
+}
 .message nav ul{
 	height: 464px;
 	overflow: hidden;
@@ -90,7 +93,7 @@
 
 
 .message ul li.msg-right{
-	float: right;
+	float: left;
 }
 .message ul li.msg-right img{
 	position: absolute;

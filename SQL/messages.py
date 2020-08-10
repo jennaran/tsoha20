@@ -4,7 +4,7 @@ from SQL import users
 
 def get_messages(group_id):
     #TODO: tarkista kuuluuko ryhmään
-    sql = "SELECT U.username, M.content, M.sent_at, U.id, G.name FROM groups G, user_groups UG, users U, messages M WHERE U.id = UG.user_id AND UG.group_id = G.id AND U.id = M.user_id AND M.group_id = G.id AND G.id = :id ORDER BY M.id"
+    sql = "SELECT U.username, M.content, M.sent_at, U.id, G.name FROM groups G, user_groups UG, users U, messages M WHERE U.id = UG.user_id AND UG.group_id = G.id AND U.id = M.user_id AND M.group_id = G.id AND G.id = :id ORDER BY M.id DESC"
     result = db.session.execute(sql, {"id": group_id})
     return result.fetchall()
 
