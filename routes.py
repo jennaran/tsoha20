@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, request, redirect
-from SQL import users, groups, messages
+from utils import users, groups, messages
 
 
 @app.route("/")
