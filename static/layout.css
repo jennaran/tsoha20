@@ -5,21 +5,32 @@ body{
 	overflow: hidden;
 }
 
-.nav-bar {
-    width: 100%;
-    background: #969796;
-    margin: 0px 0px 50px 0px;
-    text-align: center;
-    padding: 5px
+
+.nav-bar1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #969796;
+  height: 46px;
+
+}
+.nav-bar1 li {
+  float: right;
+}
+.nav-bar1 li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.nav-bar button {
-    background: #c7928f;
-    color: #4e3131;
-	border:1px solid #fff;
-	border-radius: 8px;
-	padding: 12px 16px;
+.nav-bar1 li a:hover {
+  cursor: pointer;
+  background-color: #c7928f;
 }
+
+
 
 .main-section small{
 	font-size: 12px;
@@ -31,7 +42,7 @@ body{
 	width: 960px;
 	height: 600px;
 	background-color: #e0cfbb;
-	margin: auto;
+	margin: 50px auto;
 	position: relative;
   	overflow: auto;
 }

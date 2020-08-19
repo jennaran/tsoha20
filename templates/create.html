@@ -16,56 +16,20 @@
 <div>
     <form action="/" method="post">
         <h3 class="header">Create a new chat</h3>
-        <label for="name" class="chat-name">Title:</label><br>
-        <input type="text" name="name" id="name">
-        <label for="info" class="chat-info">Description:</label><br>
-        <textarea name="info" id="info" rows="3" cols="50" placeholder=""></textarea>
+        <div class="content">
+            <label for="name" class="chat-name">Title:</label><br>
+            <input type="text" name="name" id="name" maxlength="50">
 
+            <label for="info" class="chat-info">Description:</label><br>
+            <textarea name="info" id="info" rows="4" cols="60" placeholder="Describe the chat" maxlength="300"></textarea>
 
-                            <div class="form-group">
-                                <label for="username" class="text-info">Username:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Password:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                            </div>
-                        </form>
-</div>
-<div class="head-section">
-    <div class="head-sub">
-        <h3>{{ name[0] }}</h3>
-        <small></small>
-    </div>
-</div>
-<div class="body-section">
-    <div class="message">
-        <nav>
-            <ul>
-                {% for message in messages %}
-                <li class="msg-right">
-                    <div class="msg-right-sub">
-                        <div class="msg-desc">
-                            <b>{{ message[0] }}</b>
-                            <p>{{ message[1] }}</p>
-                        </div>
-                        <small>{{ message[2].strftime("%Y-%m-%d %H:%M") }}</small>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </div>
-    <div class="body-bottom">
-        <form action="/messages/{{ id }}" method="post">
-            <div class="upload-btn">
-                <input type="text" name="content" placeholder="Type here...">
-                <button class="btn-send" type="submit" value="send">Send</button>
-            </div>
+            <label for="tags" class="chat-tags">Tags:</label><br>
+            <input type="text" name="tags" id="tags" maxlength="200">
+
+            <label for="limit" class="chat-limit"> :</label><br>
+            <input type="number" name="tags" id="limit" min="2" max="200">
+        </div>
+        <button type="submit" class="submitbtn">Create</button>
         </form>
-    </div>
 </div>
 {% endblock %}

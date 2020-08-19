@@ -1,7 +1,3 @@
-.main-section{
-	margin: auto;
-}
-
 .head-sub{
 	padding: 18px;
 	text-align: center;
@@ -16,6 +12,7 @@
 	padding: 7px;
 }
 .head-sub button{
+	cursor: pointer;
 	background: #c7928f;
 	color: #4e3131;
 	border:1px solid #c7928f;
@@ -28,9 +25,9 @@
 	width: 100%;
 }
 .body-sub{
-	height: 500px;
-	border-right:1px solid #fffcf7;
-	background-color: #fffcf7;
+	height: 498px;
+	border-right:1px solid white;
+	background-color: white;
 	z-index: 1;
 	position: relative;
 }
@@ -45,6 +42,7 @@
     overflow-y: scroll;
 }
 .body-sub ul li{
+	border-bottom: thin solid #f1e4d7;
 	padding: 10px 15px;
 	cursor: pointer;
 }
@@ -56,16 +54,6 @@
 .body-sub .chatList{
 	overflow: hidden;
 }
-.body-sub .chatList .img{
-	width: 60px;
-	float: left;
-	text-align: center;
-	position: relative;
-}
-.body-sub .chatList .img img{
-	width: 30px;
-	border-radius: 50%;
-}
 
 .body-sub .chatList .desc{
 	width: calc(100% - 60px);
@@ -73,5 +61,65 @@
 	position: relative;
 }
 .body-sub .chatList .desc h4{
-	margin-top: 6px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.dropbtn{
+  	background-color: #969796;
+  	height: 46px;
+  	color: white;
+  	padding: 14px 16px;
+  	text-align: center;
+  	border: none;
+  	cursor: pointer;
+  	text-decoration: none;
+}
+.createbtn{
+	background-color: #c7928f;
+  	color: #4e3131;
+  	padding: 14px 16px;
+  	text-align: center;
+  	border: none;
+  	cursor: pointer;
+  	text-decoration: none;
+}
+
+.dropdown{
+	width: 220px;
+  	position: relative;
+  	display: inline-block;
+}
+
+.dropdown-content{
+  	display: none;
+  	position: absolute;
+  	background-color: #C7928F;
+  	min-width: 220px;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+}
+
+.dropdown-content .content{
+  	color: white;
+  	padding: 14px 10px;
+  	text-decoration: none;
+  	display: block;
+	margin: 0px;
+	width: 100%;
+	background-color: #C7928F;
+	border: none;
+	font-size: medium;
+}
+
+.dropdown-content .content:hover{
+  	background-color: sandybrown;
+}
+
+.dropdown:hover .dropdown-content{
+  	display: block;
+}
+
+.dropdown:hover .dropbtn{
+  	background-color: #9C1A1C;
 }

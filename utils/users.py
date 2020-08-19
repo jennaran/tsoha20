@@ -28,9 +28,34 @@ def register(username, password):
     return login(username, password)
 
 
+def get_user():
+    sql = "SELECT username FROM users WHERE id=:id"
+    result = db.session.execute(sql, {'id': user_id()})
+    user = result.fetchone()
+    return user
+
+
+def delete():
+    id = user_id()
+    print("id on", id)
+    try:
+        sql = "DELETE FROM user_groups WHERE user_id=:id"
+        db.session.execute(sql, {'id': id})
+        db.session.commit()
+        sql = "DELETE FROM users WHERE id=:id"
+        db.session.execute(sql, {'id': id})
+        db.session.commit()
+        logout()
+    except:
+        return False
+    return True
+
+
 def logout():
     del session["user_id"]
 
 
 def user_id():
     return session.get("user_id", 0)
+
+

@@ -9,6 +9,7 @@ CREATE TABLE groups (
     description TEXT NOT NULL
 );
 CREATE TABLE user_groups (
+    id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users,
     group_id INTEGER REFERENCES groups
 );

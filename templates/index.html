@@ -7,12 +7,22 @@
 {% endblock %}
 
 {% block content1 %}
-    <div class="nav-bar-login-sub">
-        <button onclick="location.href='/logout'"> <i class="Sign in">Sign out</i></button>
-    </div>
+    <li>
+        <div class="dropdown">
+            <button class="dropbtn"><b>{{ username }}</b></button>
+            <div class="dropdown-content">
+                <a onclick="location.href='/logout'" class="content" style="width: 200px">Sign out</a>
+                <form action="/delete" method="GET">
+                    <input type="submit" onclick="return clicked()" value="Delete account" class="content">
+                </form>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a class="createbtn" onclick="location.href='/create'">New chat</a>
+    </li>
 {% endblock %}
 {% block content2 %}
-    <div class="main-section">
         <div class="head-section">
             <div class="head-sub">
                 <form action="/search">
@@ -26,6 +36,17 @@
                 <nav>
                     <ul>
                         {% for group in groups %}
+                        {% if type == 1 %}
+                            <li onclick="location.href = '/messages/{{ group[1] }}'">
+                            <div class="chatList">
+                                <div class="desc">
+                                    <h4>{{group[0]}}</h4>
+                                    <small>{{group[2]}}</small>
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        {% if type == 0 %}
                         <li onclick="location.href = '/messages/{{ group[1] }}'">
                             <div class="chatList">
                                 <div class="desc">
@@ -33,10 +54,15 @@
                                 </div>
                             </div>
                         </li>
+                        {% endif %}
                         {% endfor %}
                     </ul>
                 </nav>
             </div>
         </div>
-    </div>
+<script>
+    function clicked() {
+        return confirm("Do you want to delete the user {{ username }}");
+    }
+</script>
 {% endblock %}

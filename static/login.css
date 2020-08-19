@@ -8,7 +8,17 @@
   	overflow: auto;
 }
 
-.nav-bar-login-sub button{
+.nav-bar li {
 	float: right;
-	padding-left: 10px;
+}
+.nav-bar li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav-bar li a:hover {
+  cursor: pointer;
+  background-color: #c7928f;
 }
