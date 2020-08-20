@@ -20,3 +20,12 @@ CREATE TABLE messages (
     group_id INTEGER REFERENCES groups,
     sent_at TIMESTAMP
 );
+CREATE TABLE tags (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL
+);
+CREATE TABLE group_tags (
+    id SERIAL PRIMARY KEY,
+    tag_id INTEGER REFERENCES tags,
+    group_id INTEGER REFERENCES groups
+);
