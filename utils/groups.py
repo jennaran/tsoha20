@@ -13,8 +13,13 @@ def get_list():
 def get_filtered_groups(filter):
     sql = "SELECT DISTINCT G.name, G.id, G.description " \
           "FROM groups G, user_groups UG, users U " \
-          "WHERE U.id = UG.user_id AND UG.group_id = G.id AND G.name LIKE :name"
-    result = db.session.execute(sql, {"name": "%"+filter+"%"})
+          "WHERE U.id = UG.user_id AND UG.group_id = G.id " \
+          "AND G.id NOT IN (" \
+                "SELECT G.id " \
+                "FROM groups G, user_groups UG, users U " \
+                "WHERE U.id = UG.user_id AND UG.group_id = G.id AND U.id = :id) " \
+          "AND G.name LIKE :name"
+    result = db.session.execute(sql, {"id": users.user_id(), "name": "%"+filter+"%"})
     return result.fetchall()
 
 
