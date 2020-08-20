@@ -7,9 +7,15 @@
 {% endblock %}
 
 {% block content1 %}
+{% if member %}
     <li>
         <a onclick="location.href='/'">Back</a>
     </li>
+{% else %}
+    <li>
+        <a onclick="goBack()">Back</a>
+    </li>
+{% endif %}
 {% endblock %}
 
 {% block content2 %}
@@ -53,11 +59,16 @@
             <form action="/join/{{ id }}" method="post">
                 <ul>
                     <li class="joinbtn"><button type="submit">Join</button></li>
-                    <li class="cancelbtn"> <button type="button" onclick="location.href='/'">Cancel</button></li>
+                    <li class="cancelbtn"> <button type="button" onclick="goBack()">Cancel</button></li>
                 </ul>
             </form>
         </div>
     </div>
     {% endif %}
 </div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 {% endblock %}
