@@ -8,7 +8,7 @@
 
 {% block content1 %}
     <li>
-        <a onclick="location.href='/'">Back</a>
+        <a onclick="goBack()">Back</a>
     </li>
 {% endblock %}
 
@@ -32,4 +32,9 @@
         <button type="submit" class="submitbtn">Create</button>
         </form>
 </div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 {% endblock %}
