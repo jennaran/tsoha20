@@ -1,12 +1,14 @@
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    username TEXT UNIQUE NOT NULL ,
+    username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL
 );
 CREATE TABLE groups (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    description TEXT NOT NULL
+    description TEXT NOT NULL,
+    max_members INTEGER,
+    admin_id INTEGER REFERENCES users
 );
 CREATE TABLE user_groups (
     id SERIAL PRIMARY KEY,
