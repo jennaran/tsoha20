@@ -31,10 +31,15 @@ def create_group():
     if request.method == "GET":
         return render_template("create.html")
     if request.method == "POST":
-
-
-        print("eeoo")
-        #todo: post
+        name = request.form["name"]
+        info = request.form["info"]
+        tags = request.form["tags"]
+        limit = request.form["limit"]
+        id = groups.new_group(name, info, tags, limit)
+        if id:
+            return redirect(url_for('chat', id=id))
+        else:
+            return render_template("error.html", message="Failed to create a chat")
 
 
 @app.route("/register", methods=["GET", "POST"])
