@@ -14,20 +14,20 @@
 
 {% block content2 %}
 <div>
-    <form action="/" method="post">
+    <form action="/create" method="POST">
         <h3 class="header">Create a new chat</h3>
         <div class="content">
             <label for="name" class="chat-name">Title:</label><br>
-            <input type="text" name="name" id="name" maxlength="50">
+            <input type="text" name="name" id="name" maxlength="40">
 
             <label for="info" class="chat-info">Description:</label><br>
             <textarea name="info" id="info" rows="4" cols="60" placeholder="Describe the chat" maxlength="300"></textarea>
 
             <label for="tags" class="chat-tags">Tags:</label><br>
-            <input type="text" name="tags" id="tags" maxlength="200">
+            <input type="text" name="tags" id="tags" maxlength="200" placeholder="tag1, tag2, ...">
 
             <label for="limit" class="chat-limit"> :</label><br>
-            <input type="number" name="tags" id="limit" min="2" max="200">
+            <input type="number" name="limit" id="limit" min="2" max="200">
         </div>
         <button type="submit" class="submitbtn">Create</button>
         </form>
