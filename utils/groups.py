@@ -1,5 +1,5 @@
 from db import db
-from utils import users
+from utils import users, tags
 
 
 def get_list():
@@ -43,3 +43,25 @@ def join_a_group(group_id):
     except:
         return False
     return True
+
+
+def new_group(name, info, tags_string, limit):
+    print("Ollaan new_group: name =", name, ", info = ",info, ", tags_string = ",tags_string,", limit = ",limit)
+    try:
+        sql = "INSERT INTO groups (name, description, max_members, admin_id) " \
+              "VALUES (:name, :description, :max_members, :admin_id) RETURNING id"
+        result = db.session.execute(sql, {
+            "name": name,
+            "description": info,
+            "max_members": limit,
+            "admin_id": users.user_id()
+        })
+        db.session.commit()
+        group_id = result.fetchone()[0]
+        # ei toimi v
+        tags.tags_for_new_group(tags_string, group_id)
+    except:
+        return False
+    return True
+
+
