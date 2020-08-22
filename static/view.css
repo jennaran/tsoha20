@@ -1,0 +1,59 @@
+.view-main{
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #c49a9a;
+    border-radius: 4px;
+    width: 800px;
+    height: 520px;
+    color: #3a2626;
+}
+.view-sub{
+    padding: 20px;
+}
+.view-sub h2{
+    color: #3a2626;
+}
+
+.leavebtn:hover {
+    background-color: #9C1A1C;
+}
+.leavebtn{
+    background-color: #C7928F;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    position: absolute;
+    bottom: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.view-left{
+    float: left;
+    padding: 20px;
+    width: 440px;
+    background: #f5eadb;
+    height: 440px;
+}
+.view-right{
+    float: right;
+    padding: 20px;
+    width: 220px;
+    background: #f5eadb;
+    height: 440px;
+}
+.view-right ul{
+    padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.view-right nav ul{
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.view-right ul li{
+	border-bottom: thin solid #f1e4d7;
+	padding: 10px 15px;
+	cursor: pointer;
+}

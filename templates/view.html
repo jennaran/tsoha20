@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}View{% endblock %}
+
+{% block head1 %}
+<link href="../static/view.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content1 %}
+    <li>
+        <a onclick="goBack()">Back</a>
+    </li>
+{% endblock %}
+
+{% block content2 %}
+<div class="view-main">
+    <div class="view-sub">
+        <div class="view-left">
+            <h2>{{ group[0] }}</h2>
+            <b>Description:</b>
+            <p>"{{ group[3] }}"</p>
+            <div>
+                <b>Tags:</b>
+                <ul>
+                    {% for tag in tag_list %}
+                        <li>{{ tag[0] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <b>Admin: </b>
+            <p>{{ group[2] }}</p>
+            <form action="/leave/{{ group[4] }}" method="POST">
+                <button onclick="return clicked()" type="submit" class="leavebtn">Leave the group</button>
+            </form>
+        </div>
+        <div class="view-right">
+            <b>Members: </b>
+            <p>{{ member_count[0] }}/{{ group[1] }}</p>
+            <nav>
+                <ul>
+                    {% for member in members %}
+                    <li>{{ member[0] }}</li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        </div>
+</div>
+<script>
+    function goBack() {
+      window.history.back();
+    }
+    function clicked() {
+        return confirm("Do you want to leave the group {{ group[0] }}");
+    }
+</script>
+{% endblock %}
