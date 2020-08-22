@@ -38,5 +38,5 @@ body{
 	background-color: #e0cfbb;
 	margin: 50px auto;
 	position: relative;
-  	overflow: auto;
+  	overflow: hidden;
 }
