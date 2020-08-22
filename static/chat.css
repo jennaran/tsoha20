@@ -23,13 +23,14 @@
 	padding: 0px;
 	list-style: none;
 	margin: 0px auto;
-	width: 90%;
+	width: 100%;
 	overflow:hidden;
 }
 .message ul > li {
     transform: rotate(-180deg);
 }
 .message nav ul{
+	margin: 0px;
 	height: 464px;
 	overflow: hidden;
     overflow-y: scroll;
@@ -45,31 +46,23 @@
 	height: calc(100% - 68px);
 	font-family: sans-serif;
 }
-.message ul{
-	padding: 0px;
-	list-style: none;
-	margin: 0px auto;
-	width: 90%;
-	overflow:hidden;
-}
 .message ul li{
 	position: relative;
 	width: 80%;
 	padding: 15px 0px;
 	clear: both;
 }
+
+
+
 .message ul li.msg-left{
-	float: left;
-}
-.message ul li.msg-left img{
-	position: absolute;
-	width: 40px;
-	bottom: 30px;
+	float: right;
 }
 .message ul li.msg-left .msg-desc{
 	margin-left: 70px;
 	font-size: 12px;
-	background: #E8E8E8;
+	background: white;
+	color: #402c27;
 	padding:5px 10px;
 	border-radius: 5px 5px 5px 0px;
 	position: relative;
@@ -78,7 +71,7 @@
 	position: absolute;
 	content: '';
 	border:10px solid transparent;
-	border-bottom-color: #E8E8E8;
+	border-bottom-color: white;
 	bottom: 0px;
 	left: -10px;
 }
@@ -91,12 +84,6 @@
 
 .message ul li.msg-right{
 	float: left;
-}
-.message ul li.msg-right img{
-	position: absolute;
-	width: 40px;
-	right: 0px;
-	bottom: 30px;
 }
 .message ul li.msg-right .msg-desc{
 	margin-right: 70px;

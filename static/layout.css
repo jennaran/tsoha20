@@ -4,34 +4,28 @@ body{
 	margin: 0px 0px;
 	overflow: hidden;
 }
-
-
 .nav-bar1 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #969796;
-  height: 46px;
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #969796;
+    height: 46px;
 }
 .nav-bar1 li {
-  float: right;
+    float: right;
 }
 .nav-bar1 li a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
 }
-
 .nav-bar1 li a:hover {
-  cursor: pointer;
-  background-color: #c7928f;
+    cursor: pointer;
+    background-color: #9C1A1C;
 }
-
-
-
 .main-section small{
 	font-size: 12px;
 }
@@ -46,4 +40,3 @@ body{
 	position: relative;
   	overflow: auto;
 }
-

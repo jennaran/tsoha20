@@ -13,21 +13,21 @@
 {% endblock %}
 
 {% block content2 %}
-<div>
-    <form action="/create" method="POST">
-        <h3 class="header">Create a new chat</h3>
-        <div class="content">
-            <label for="name" class="chat-name">Title:</label><br>
-            <input type="text" name="name" id="name" maxlength="40">
+<div class="create-main">
+    <form action="/create" method="POST" class="create-form">
+        <h2 class="header">Create a new chat</h2>
+        <div>
+            <label for="name">Title:</label><br>
+            <input type="text" name="name" id="name" maxlength="40" placeholder="Write the title here..">
 
             <label for="info" class="chat-info">Description:</label><br>
-            <textarea name="info" id="info" rows="4" cols="60" placeholder="Describe the chat" maxlength="300"></textarea>
+            <textarea name="info" id="info" rows="4" cols="60" placeholder="Describe the chat.." maxlength="300"></textarea>
 
-            <label for="tags" class="chat-tags">Tags:</label><br>
-            <input type="text" name="tags" id="tags" maxlength="200" placeholder="tag1, tag2, ...">
+            <label for="tags">Tags:</label><br>
+            <input type="text" name="tags" id="tags" maxlength="200" placeholder="tag1, tag2, ..">
 
-            <label for="limit" class="chat-limit"> :</label><br>
-            <input type="number" name="limit" id="limit" min="2" max="200">
+            <label for="limit" class="chat-limit">Max number of members:</label><br>
+            <input type="number" name="limit" id="limit" min="2" max="200" value="2">
         </div>
         <button type="submit" class="submitbtn">Create</button>
         </form>

@@ -77,20 +77,13 @@
 }
 .createbtn{
 	background-color: #c7928f;
-  	color: #4e3131;
-  	padding: 14px 16px;
-  	text-align: center;
   	border: none;
-  	cursor: pointer;
-  	text-decoration: none;
 }
-
 .dropdown{
 	width: 220px;
   	position: relative;
   	display: inline-block;
 }
-
 .dropdown-content{
   	display: none;
   	position: absolute;
@@ -99,7 +92,6 @@
   	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   	z-index: 1;
 }
-
 .dropdown-content .content{
   	color: white;
   	padding: 14px 10px;
@@ -111,15 +103,12 @@
 	border: none;
 	font-size: medium;
 }
-
 .dropdown-content .content:hover{
   	background-color: sandybrown;
 }
-
 .dropdown:hover .dropdown-content{
   	display: block;
 }
-
 .dropdown:hover .dropbtn{
   	background-color: #9C1A1C;
 }
