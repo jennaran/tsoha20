@@ -1,6 +1,13 @@
 from db import db
 
 
+def get_tags(group_id):
+    sql = "SELECT T.name FROM tags T, group_tags GT " \
+          "WHERE GT.tag_id = T.id AND GT.group_id=:group_id"
+    result = db.session.execute(sql, {"group_id": group_id})
+    return result.fetchall()
+
+
 def create_list(tags_string):
     return tags_string.split(', ')
 
