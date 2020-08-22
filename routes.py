@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, request, redirect, url_for
-from utils import users, groups, messages
+from utils import users, groups, messages, tags
 
 
 @app.route("/")
@@ -85,6 +85,24 @@ def chat(id):
             return redirect(url_for('chat', id=id))
         else:
             return render_template("error.html", message="Failed to send the message")
+
+
+@app.route("/view/<int:id>")
+def view(id):
+    group = groups.get_info(id)
+    member_count = groups.get_member_count(id)
+    members = groups.get_members(id)
+    tag_list = tags.get_tags(id)
+    print(members)
+    return render_template("view.html", group=group, member_count=member_count, members=members, tag_list=tag_list)
+
+
+@app.route("/leave/<int:id>", methods=["POST"])
+def leave(id):
+    if groups.leave_a_group(id):
+        return redirect("/")
+    else:
+        return render_template("error", message="Failed to leave the group")
 
 
 @app.route("/delete")
