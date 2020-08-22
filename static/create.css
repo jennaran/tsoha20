@@ -37,14 +37,14 @@
     box-sizing: border-box;
 }
 .create-form h2{
-    color: #4e3131;
+    color: #3a2626;
+}
+.create-form label{
+    color: #3a2626;
 }
 
 .submitbtn:hover {
     background-color: #9C1A1C;
-}
-.create-form label{
-    color: #4e3131;
 }
 .submitbtn{
     background-color: #C7928F;
