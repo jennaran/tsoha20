@@ -55,12 +55,13 @@ def new_group(name, info, tags_string, limit):
             "max_members": limit,
             "admin_id": users.user_id()
         })
-        db.session.commit()
         group_id = result.fetchone()[0]
         # vvvv
         tags.tags_for_new_group(tags_string, group_id)
+        join_a_group(group_id)
+        db.session.commit()
     except:
-        return False
-    return True
+        return None
+    return group_id
 
 
