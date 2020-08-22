@@ -1,21 +1,17 @@
-.login-main{
-	margin: 100px auto;
+.create-main{
+    margin: 40px auto;
     position: relative;
     overflow: hidden;
     border: 1px solid #c49a9a;
     border-radius: 4px;
-	width: 500px;
-	height: 400px;
+    width: 800px;
+    height: 520px;
 }
-.login-form{
+.create-form{
     padding: 20px;
-	height: 360px;
 }
-.login-form-sub {
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-.login-form-sub input[type=text]{
+
+.create-form input[type=text]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -24,7 +20,14 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-.login-form-sub input[type=password]{
+.create-form input[type=number] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.create-form textarea{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -33,17 +36,17 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-.login-form h2{
-    color: #4e3131;
-}
-.login-form-sub label{
+.create-form h2{
     color: #4e3131;
 }
 
-.loginbtn:hover {
+.submitbtn:hover {
     background-color: #9C1A1C;
 }
-.loginbtn{
+.create-form label{
+    color: #4e3131;
+}
+.submitbtn{
     background-color: #C7928F;
     color: white;
     padding: 14px 20px;
