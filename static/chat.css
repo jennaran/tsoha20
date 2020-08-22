@@ -7,8 +7,11 @@
 .head-sub{
 	padding: 10px 20px 0px 20px;
 }
+.head-sub a{
+	text-decoration: none;
+}
 .head-sub h3{
-	color: #4e3131;
+	color: #3a2626;
 }
 .body-section{
 	clear: both;
@@ -62,7 +65,7 @@
 	margin-left: 70px;
 	font-size: 12px;
 	background: white;
-	color: #402c27;
+	color: #3a2626;
 	padding:5px 10px;
 	border-radius: 5px 5px 5px 0px;
 	position: relative;
@@ -104,7 +107,7 @@
 }
 .message ul li.msg-right small{
 	float: right;
-	color: #4a3c3a;
+	color: #3a2626;
 	margin-right: 70px;
 }
 
@@ -149,4 +152,42 @@
 	font-size: 18px;
 	background: #fff;
 	cursor: pointer;
+}
+
+.join-group-main {
+    margin: 179px auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #c49a9a;
+	background-color: #e9ded2;
+    border-radius: 4px;
+	width: 400px;
+}
+.join-group-sub{
+    padding: 20px;
+}
+
+.join-group-sub h2{
+    color: #3a2626;
+}
+.join-group-sub button:hover {
+    background-color: #9C1A1C;
+}
+.joinbtn{
+    background-color: #C7928F;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cancelbtn{
+    background-color: #b1b1b1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }

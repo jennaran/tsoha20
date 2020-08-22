@@ -21,8 +21,7 @@
 {% block content2 %}
 <div class="head-section">
     <div class="head-sub">
-        <h3>{{ name[0] }}</h3>
-        <small></small>
+        <a href="/view/{{ id }}"> <h3>{{ name[0] }}</h3></a>
     </div>
 </div>
 <div class="body-section">
@@ -66,14 +65,14 @@
     </div>
     {% else %}
     <div class="join-group-main">
-        <h2>Join {{ name[0] }}</h2>
-        <div class="join-group-buttons">
-            <form action="/join/{{ id }}" method="post">
-                <ul>
-                    <li class="joinbtn"><button type="submit">Join</button></li>
-                    <li class="cancelbtn"> <button type="button" onclick="goBack()">Cancel</button></li>
-                </ul>
-            </form>
+        <div class="join-group-sub">
+            <h2>Join {{ name[0] }}</h2>
+            <div class="join-group-buttons">
+                <form action="/join/{{ id }}" method="post">
+                    <button class="joinbtn" type="submit">Join</button>
+                    <button class="cancelbtn" type="button" onclick="goBack()">Cancel</button>
+                </form>
+            </div>
         </div>
     </div>
     {% endif %}
