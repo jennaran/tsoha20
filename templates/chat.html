@@ -31,6 +31,7 @@
         <nav>
             <ul>
                 {% for message in messages %}
+                {% if message[3] == session.user_id %}
                 <li class="msg-right">
                     <div class="msg-right-sub">
                         <div class="msg-desc">
@@ -40,6 +41,17 @@
                         <small>{{ message[2].strftime("%Y-%m-%d %H:%M") }}</small>
                     </div>
                 </li>
+                {% else %}
+                <li class="msg-left">
+                    <div class="msg-left-sub">
+                        <div class="msg-desc">
+                            <b>{{ message[0] }}</b>
+                            <p>{{ message[1] }}</p>
+                        </div>
+                        <small>{{ message[2].strftime("%Y-%m-%d %H:%M") }}</small>
+                    </div>
+                </li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </nav>
