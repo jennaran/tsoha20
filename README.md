@@ -5,34 +5,24 @@ Sovellus on chatti-sovellus, jossa nimimerkkien takana olet käyttäjät voivat 
 
 ## Käyttäjä
 
-Käyttäjän tulee luoda tili. Tilin luomista varten kysytään käyttäjänimi, salasana ja sähköpostiosoite(?). Käyttäjänimen ja sähköpostin tulee olla uniikkeja. Käyttäjänimeä ja salasanaa voi myöhemmin vaihtaa. Tilin voi myös halutessaan poistaa.
+Käyttäjän tulee luoda tili. Tilin luomista varten kysytään käyttäjänimi ja salasana. Käyttäjänimen tulee olla uniikki ja salasanan pituudeltaan 8-128 merkkiä. ~~Käyttäjänimeä ja salasanaa voi myöhemmin vaihtaa.~~ Tilin voi halutessaan poistaa.
 
 ## Chatit
 
 ### Chatin luonti
 
-Käyttäjät voivat luoda chattejä. Chatin luojasta tulee automaattisesti chatin ylläpitäjä. Ylläpitäjällä on mahdollisuus poistaa ihmisiä chatistä. Chatin luomista varten tulee chatille valita nimi, lyhyt kuvaus ja antaa aiheeseen viittaavia tägejä, joilla muut käyttäjät löytävät chatin. Chatille voi myös halutessaan asettaa maximi osallistujamäärän. Ylläpitäjä voi muokata kaikkia ominaisuuksia myöhemmin. 
+Käyttäjät voivat luoda chattejä. Chatin luojasta tulee automaattisesti chatin ylläpitäjä. ~~Ylläpitäjällä on mahdollisuus poistaa ihmisiä chatistä.~~ Chatin luomista varten tulee chatille valita nimi, lyhyt kuvaus, antaa aiheeseen viittaavia tägejä, joilla muut käyttäjät löytävät chatin ja päättää osallistujamäärä. Chatin nimi saa olla maksimissaan 40 merkkiä, kuvaus 300 merkkiä ja tägit 200 merkkiä yhteensä. Osallistujamäärän voi valita 2-200 osallistujan väliltä.  ~~Ylläpitäjä voi muokata kaikkia ominaisuuksia myöhemmin.~~ 
 
 ### Chattien haku
 
-Käyttäjät voivat etsiä toisten käyttäjien luomia chattejä kirjoittamalla hakukenttään chatin nimen tai tägin(/tägejä?). Näin ilmestyy lista hakua vastaavista ryhmistä. Listassa on tieto ryhmän nimestä, sen kuvaus ja jäsenten määrä. Liity ryhmään, niin näet keskustelun ja pääset itse osallistumaan siihen. Ryhmästä on mahdollista poistua myöhemmin. 
+Käyttäjät voivat etsiä toisten käyttäjien luomia chattejä kirjoittamalla hakukenttään chatin nimen tai tägin. Näin ilmestyy lista hakua vastaavista ryhmistä. Listassa on tieto ryhmän nimestä ja sen kuvaus. Liity ryhmään, niin näet keskustelun ja pääset itse osallistumaan siihen. Ryhmästä on mahdollista poistua myöhemmin. 
 
 
-# Nykyinen tila:
+### Chatin tarkastelu
 
-Voit luoda tilin ja kirjautua sillä sisään. 
-Sisään kirjautuessa näät listan ryhmistä, joiden jäsen olet. 
-Ryhmää klikkaamalla näet ryhmässä lähetetyt viestit. 
-Voit lähettää viestin ryhmään.
-Sisään kirjautuessa voit myös etsiä muiden käyttäjien ryhmiä (painamalla nappulaa),
-joita pääset tutkimaan muiden ryhmien tavoin. (koita etsiä 'testi')
-Muiden ryhmiin ei voi lähettää viestejä. 
+Kun painat chatissä sen otsikkoa, pääset näkemään kyseisen chatin tiedot.
 
-Kokeile:
 
-Username: Nimi
-
-Password: salasana
-
+*Sovelluksessa on tällä hetkellä kaksi chattia, jotka löydät etsimällä 'en' tai tagilla 'testi'.*
 
 HEROKU: https://tsoha-chatapp1.herokuapp.com/
