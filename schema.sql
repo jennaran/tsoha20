@@ -1,3 +1,8 @@
+DROP TABLE users;
+DROP TABLE messages;
+DROP TABLE user_groups;
+DROP TABLE groups;
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username TEXT UNIQUE NOT NULL,
