@@ -8,6 +8,7 @@ CREATE TABLE groups (
     name TEXT NOT NULL,
     description TEXT NOT NULL,
     max_members INTEGER,
+    is_full BOOLEAN DEFAULT false,
     admin_id INTEGER REFERENCES users
 );
 CREATE TABLE user_groups (
