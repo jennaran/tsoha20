@@ -18,7 +18,7 @@
         <div class="view-left">
             <h2>{{ group[0] }}</h2>
             <b>Description:</b>
-            <p>"{{ group[3] }}"</p>
+            <div class="text-area"><p>"{{ group[3] }}"</p></div>
             <div>
                 <b>Tags:</b>
                 <ul>
@@ -37,13 +37,15 @@
         <div class="view-right">
             <b>Members: </b>
             <p>{{ member_count[0] }}/{{ group[1] }}</p>
-            <nav>
-                <ul>
-                    {% for member in members %}
-                    <li>{{ member[0] }}</li>
-                    {% endfor %}
-                </ul>
-            </nav>
+            <div class="right-list">
+                <nav>
+                    <ul>
+                        {% for member in members %}
+                        <li>{{ member[0] }}</li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
         </div>
         </div>
 </div>

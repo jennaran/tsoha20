@@ -164,6 +164,7 @@
 	width: 400px;
 }
 .join-group-sub{
+	overflow-wrap: break-word;
     padding: 20px;
 }
 

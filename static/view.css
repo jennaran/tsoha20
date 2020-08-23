@@ -14,7 +14,12 @@
 .view-sub h2{
     color: #3a2626;
 }
-
+.text-area {
+    margin: 10px 0px;
+    height: 90px;
+    overflow: scroll;
+    overflow-wrap: break-word;
+}
 .leavebtn:hover {
     background-color: #9C1A1C;
 }
@@ -35,25 +40,31 @@
     background: #f5eadb;
     height: 440px;
 }
+.view-left ul{
+    margin: 10px 0px;
+    height: 90px;
+    overflow: scroll;
+}
 .view-right{
+    overflow: hidden;
     float: right;
     padding: 20px;
     width: 220px;
     background: #f5eadb;
     height: 440px;
 }
-.view-right ul{
+
+.right-list ul{
     padding: 0px;
 	margin: 0px;
 	list-style: none;
 }
-.view-right nav ul{
-    height: 500px;
+.right-list nav ul{
+    height: 370px;
     overflow: hidden;
     overflow-y: scroll;
 }
-.view-right ul li{
+.right-list ul li{
 	border-bottom: thin solid #f1e4d7;
 	padding: 10px 15px;
-	cursor: pointer;
 }
