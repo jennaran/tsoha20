@@ -22,7 +22,7 @@ Käyttäjät voivat etsiä toisten käyttäjien luomia chattejä kirjoittamalla 
 
 Kun painat chatissä sen otsikkoa, pääset näkemään kyseisen chatin tiedot.
 
-
+## HEROKU
 
 **Sovelluksessa on tällä hetkellä kaksi chattia, jotka löydät etsimällä 'en' tai tagilla 'testi'.**
 
