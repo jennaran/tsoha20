@@ -9,7 +9,7 @@ def get_tags(group_id):
 
 
 def create_list(tags_string):
-    return tags_string.split(', ')
+    return tags_string.split(", ")
 
 
 def create_group_tag(group_id, tag_id):

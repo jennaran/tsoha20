@@ -33,7 +33,7 @@ def get_info(group_id):
 
 
 def get_name(group_id):
-    sql = "SELECT groups.name FROM groups WHERE groups.id = :id"
+    sql = "SELECT name FROM groups WHERE groups.id = :id"
     result = db.session.execute(sql, {"id": group_id})
     return result.fetchall()
 
@@ -66,28 +66,21 @@ def is_a_member(group_id):
 
 
 def is_full(group_id):
-    print("full")
     sql = "SELECT is_full FROM groups WHERE id=:group_id"
     result = db.session.execute(sql, {"group_id": group_id})
-    print(result.fetchone())
     return result.fetchone()
 
 
 def set_full(group_id):
-    try:
-        sql = "UPDATE groups SET is_full = true WHERE id = :group_id"
-        db.session.execute(sql, {"group_id": group_id})
-        db.session.commit()
-    except:
-        return False
-    return True
+    sql = "UPDATE groups SET is_full = true WHERE id = :group_id"
+    db.session.execute(sql, {"group_id": group_id})
+    db.session.commit()
 
 
 def join_a_group(group_id):
     if is_full(group_id):
         return False
     else:
-       print("ryhmässä tilaa")
        try:
            sql = "INSERT INTO user_groups (user_id, group_id) VALUES (:user_id, :group_id)"
            db.session.execute(sql, {"user_id": users.user_id(), "group_id": group_id})
@@ -99,7 +92,6 @@ def join_a_group(group_id):
        except:
            return False
        return True
-
 
 
 def leave_a_group(group_id):

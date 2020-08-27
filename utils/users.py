@@ -5,7 +5,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 def login(username, password):
     sql = "SELECT password, id FROM users WHERE username=:username"
-    result = db.session.execute(sql, {'username': username})
+    result = db.session.execute(sql, {"username": username})
     user = result.fetchone()
     if user is None:
         return False
@@ -30,20 +30,19 @@ def register(username, password):
 
 def get_user():
     sql = "SELECT username FROM users WHERE id=:id"
-    result = db.session.execute(sql, {'id': user_id()})
+    result = db.session.execute(sql, {"id": user_id()})
     user = result.fetchone()
     return user
 
 
 def delete():
     id = user_id()
-    print("id on", id)
     try:
         sql = "DELETE FROM user_groups WHERE user_id=:id"
-        db.session.execute(sql, {'id': id})
+        db.session.execute(sql, {"id": id})
         db.session.commit()
         sql = "DELETE FROM users WHERE id=:id"
-        db.session.execute(sql, {'id': id})
+        db.session.execute(sql, {"id": id})
         db.session.commit()
         logout()
     except:

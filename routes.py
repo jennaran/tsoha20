@@ -40,7 +40,7 @@ def create_group():
             limit = request.form["limit"]
             id = groups.new_group(name, info, tags, limit)
             if id:
-                return redirect(url_for('chat', id=id))
+                return redirect(url_for("chat", id=id))
             else:
                 return render_template("error.html", message="Failed to create a chat")
 
@@ -89,9 +89,9 @@ def chat(id):
             member = groups.is_a_member(id)
             return render_template("chat.html", name=name[0], messages=list, id=id, member=member)
         if request.method == "POST":
-            content = request.form['content']
+            content = request.form["content"]
             if messages.send(content, id):
-                return redirect(url_for('chat', id=id))
+                return redirect(url_for("chat", id=id))
             else:
                 return render_template("error.html", message="Failed to send the message")
 
@@ -136,6 +136,6 @@ def join(id):
         return redirect("/login")
     else:
         if groups.join_a_group(id):
-            return redirect(url_for('chat', id=id))
+            return redirect(url_for("chat", id=id))
         else:
             return render_template("error.html", message="Failed to join the group")
