@@ -130,6 +130,15 @@ def delete_user():
         return redirect("/")
 
 
+@app.route("/remove/<int:id>/<int:id2>")
+def remove_user(id, id2):
+    if users.user_id() == 0:
+        return redirect("/login")
+    else:
+        groups.remove_from_group(id, id2)
+        return redirect(url_for("view", id=id))
+
+
 @app.route("/join/<int:id>", methods=["POST"])
 def join(id):
     if users.user_id() == 0:
