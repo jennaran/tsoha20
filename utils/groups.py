@@ -53,7 +53,7 @@ def get_member_count(group_id):
 
 
 def get_members(group_id):
-    sql = "SELECT DISTINCT U.username " \
+    sql = "SELECT DISTINCT U.username, U.id " \
           "FROM groups G, user_groups UG, users U " \
           "WHERE U.id = UG.user_id AND UG.group_id = G.id AND G.id = :group_id " \
           "ORDER BY U.username"
@@ -94,11 +94,19 @@ def join_a_group(group_id):
 
 
 def leave_a_group(group_id):
-        sql = "DELETE FROM user_groups WHERE user_id = :user_id AND group_id = :group_id"
-        db.session.execute(sql, {"user_id": users.user_id(), "group_id": group_id})
-        sql2 = "UPDATE groups SET is_full = false WHERE id = :group_id"
-        db.session.execute(sql2, {"group_id": group_id})
-        db.session.commit()
+    sql = "DELETE FROM user_groups WHERE user_id = :user_id AND group_id = :group_id"
+    db.session.execute(sql, {"user_id": users.user_id(), "group_id": group_id})
+    sql2 = "UPDATE groups SET is_full = false WHERE id = :group_id"
+    db.session.execute(sql2, {"group_id": group_id})
+    db.session.commit()
+
+
+def remove_from_group(group_id, user_id):
+    sql = "DELETE FROM user_groups WHERE user_id = :user_id AND group_id = :group_id"
+    db.session.execute(sql, {"user_id": user_id, "group_id": group_id})
+    sql2 = "UPDATE groups SET is_full = false WHERE id = :group_id"
+    db.session.execute(sql2, {"group_id": group_id})
+    db.session.commit()
 
 
 def new_group(name, info, tags_string, limit):
