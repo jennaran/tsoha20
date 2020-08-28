@@ -1,10 +1,3 @@
-DROP TABLE messages;
-DROP TABLE group_tags;
-DROP TABLE user_groups;
-DROP TABLE groups;
-DROP TABLE users;
-DROP TABLE tags;
-
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username TEXT UNIQUE NOT NULL,
