@@ -45,6 +45,7 @@
 	border-bottom: thin solid #f1e4d7;
 	padding: 10px 15px;
 	cursor: pointer;
+	overflow-wrap: break-word;
 }
 .body-sub ul li:active{
 	background: #c78f8f;
