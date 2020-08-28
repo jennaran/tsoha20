@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}Create{% endblock %}
+{% block title %}Create A New Chat{% endblock %}
 
 {% block head1 %}
 <link href="../static/create.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
         <h2 class="header">Create a new chat</h2>
         <div>
             <label for="name">Title:</label><br>
-            <input type="text" name="name" id="name" maxlength="40" required="required" placeholder="Title here..">
+            <input type="text" name="name" id="name" maxlength="30" required="required" placeholder="Title here..">
 
             <label for="info" class="chat-info">Description:</label><br>
             <textarea name="info" id="info" rows="4" cols="60" required="required" placeholder="What do you want to talk about?" maxlength="300"></textarea>
