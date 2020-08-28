@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 
-{% block title %}App{% endblock %}
+{% block title %}
+{% if type == 1 %}Search{% endif %}
+{% if type == 0 %}Home{% endif %}
+{% endblock %}
 
 {% block head1 %}
 <link href="static/index.css" rel="stylesheet" type="text/css">
@@ -11,10 +14,10 @@
         <div class="dropdown">
             <button class="dropbtn"><b>{{ username }}</b></button>
             <div class="dropdown-content">
-                <a onclick="location.href='/logout'" class="content" style="width: 200px">Sign out</a>
                 <form action="/delete" method="GET">
                     <input type="submit" onclick="return clicked()" value="Delete account" class="content">
                 </form>
+                <a onclick="location.href='/logout'" class="content" style="width: 200px">Sign out</a>
             </div>
         </div>
     </li>
