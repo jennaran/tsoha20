@@ -1,0 +1,16 @@
+.error-main{
+    margin: 277px auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #c49a9a;
+	background-color: #e9ded2;
+    border-radius: 4px;
+	width: 400px;
+}
+.error-sub{
+    overflow-wrap: break-word;
+    padding: 20px;
+}
+.error-sub h2{
+    color: #3a2626;
+}
