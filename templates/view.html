@@ -8,7 +8,7 @@
 
 {% block content1 %}
     <li>
-        <a onclick="goBack()">Back</a>
+        <a onclick="location.href='/messages/{{ group[4] }}'">Back</a>
     </li>
 {% endblock %}
 
@@ -44,6 +44,9 @@
                         {% for member in members %}
                         <li>
                             {{ member[0] }}
+                            {% if  group[5] == session.user_id and member[1] != session.user_id %}
+                                <button class="removebtn" onclick="location.href='/remove/{{ group[4] }}/{{ member[1] }}'">Remove</button>
+                            {% endif %}
                         </li>
                         {% endfor %}
                     </ul>
@@ -53,9 +56,6 @@
     </div>
 </div>
 <script>
-    function goBack() {
-      window.history.back();
-    }
     function clicked() {
         return confirm("Do you want to leave the group {{ group[0] }}");
     }
