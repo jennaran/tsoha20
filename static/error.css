@@ -10,7 +10,14 @@
 .error-sub{
     overflow-wrap: break-word;
     padding: 20px;
+    color: #3a2626;
 }
 .error-sub h2{
     color: #3a2626;
+}
+
+.error-sub a{
+    cursor: pointer;
+    text-decoration: underline #9C1A1C;
+    color: #9C1A1C;
 }
