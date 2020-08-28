@@ -44,6 +44,7 @@
     margin: 10px 0px;
     height: 90px;
     overflow: scroll;
+    overflow-wrap: break-word;
 }
 .view-right{
     overflow: hidden;
