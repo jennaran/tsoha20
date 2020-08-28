@@ -11,21 +11,23 @@ def get_list():
 
 
 def get_filtered_groups(filter):
-    sql = "SELECT DISTINCT G.name, G.id, G.description, G.max_members " \
-          "FROM groups G, user_groups UG, users U, group_tags GT, tags T " \
-          "WHERE U.id = UG.user_id AND UG.group_id = G.id " \
-          "AND G.id = GT.group_id AND GT.tag_id = T.id " \
+    sql = "SELECT DISTINCT G.name, G.id, G.description " \
+          "FROM groups G LEFT JOIN user_groups UG on G.id = UG.group_id " \
+          "LEFT JOIN users U on UG.user_id = U.id " \
+          "JOIN group_tags GT on G.id = GT.group_id " \
+          "JOIN tags T on GT.tag_id = T.id " \
           "AND G.id NOT IN (" \
                 "SELECT G.id " \
                 "FROM groups G, user_groups UG, users U " \
                 "WHERE U.id = UG.user_id AND UG.group_id = G.id AND U.id = :id) " \
-          "AND (LOWER(G.name) LIKE :name OR LOWER(T.name) LIKE :name) AND G.is_full = false"
+          "AND (LOWER(G.name) LIKE :name OR LOWER(T.name) LIKE :name) AND G.is_full = false " \
+          "GROUP BY G.name, G.id, G.description"
     result = db.session.execute(sql, {"id": users.user_id(), "name": "%"+filter+"%"})
     return result.fetchall()
 
 
 def get_info(group_id):
-    sql = "SELECT DISTINCT G.name, G.max_members, U.username, G.description, G.id " \
+    sql = "SELECT DISTINCT G.name, G.max_members, U.username, G.description, G.id, U.id " \
           "FROM groups G, user_groups UG, users U " \
           "WHERE G.id = :group_id AND U.id = G.admin_id"
     result = db.session.execute(sql, {"group_id": group_id})
