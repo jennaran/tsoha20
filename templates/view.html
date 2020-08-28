@@ -32,6 +32,7 @@
             <p>{{ group[2] }}</p>
             <form action="/leave/{{ group[4] }}" method="POST">
                 <button onclick="return clicked()" type="submit" class="leavebtn">Leave the group</button>
+                <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
             </form>
         </div>
         <div class="view-right">
@@ -41,13 +42,15 @@
                 <nav>
                     <ul>
                         {% for member in members %}
-                        <li>{{ member[0] }}</li>
+                        <li>
+                            {{ member[0] }}
+                        </li>
                         {% endfor %}
                     </ul>
                 </nav>
             </div>
         </div>
-        </div>
+    </div>
 </div>
 <script>
     function goBack() {

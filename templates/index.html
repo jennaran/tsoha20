@@ -16,6 +16,7 @@
             <div class="dropdown-content">
                 <form action="/delete" method="GET">
                     <input type="submit" onclick="return clicked()" value="Delete account" class="content">
+                    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
                 </form>
                 <a onclick="location.href='/logout'" class="content" style="width: 200px">Sign out</a>
             </div>
@@ -34,6 +35,7 @@
                 <form action="/search">
                     <input type="text" name="query" placeholder="Search for new chats..">
                     <button type="submit"> <i class="search-button"></i>Search</button>
+                    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
                 </form>
             </div>
         </div>

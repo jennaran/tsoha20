@@ -60,6 +60,7 @@
             <div class="upload-btn">
                 <input type="text" name="content" required="required" placeholder="Type here...">
                 <button class="btn-send" type="submit" value="send">Send</button>
+                <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
             </div>
         </form>
     </div>
@@ -71,6 +72,7 @@
                 <form action="/join/{{ id }}" method="post">
                     <button class="joinbtn" type="submit">Join</button>
                     <button class="cancelbtn" type="button" onclick="goBack()">Cancel</button>
+                    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, session, abort
 from utils import users, groups, messages, tags
 
 
@@ -34,6 +34,8 @@ def create_group():
         if request.method == "GET":
             return render_template("create.html")
         if request.method == "POST":
+            if session["csrf_token"] != request.form["csrf_token"]:
+                abort(403)
             name = request.form["name"]
             info = request.form["info"]
             tags = request.form["tags"]
@@ -89,6 +91,8 @@ def chat(id):
             member = groups.is_a_member(id)
             return render_template("chat.html", name=name[0], messages=list, id=id, member=member)
         if request.method == "POST":
+            if session["csrf_token"] != request.form["csrf_token"]:
+                abort(403)
             content = request.form["content"]
             messages.send(content, id)
             return redirect(url_for("chat", id=id))
@@ -111,6 +115,8 @@ def leave(id):
     if users.user_id() == 0:
         return redirect("/login")
     else:
+        if session["csrf_token"] != request.form["csrf_token"]:
+            abort(403)
         groups.leave_a_group(id)
         return redirect("/")
 
@@ -129,6 +135,8 @@ def join(id):
     if users.user_id() == 0:
         return redirect("/login")
     else:
+        if session["csrf_token"] != request.form["csrf_token"]:
+            abort(403)
         if groups.join_a_group(id):
             return redirect(url_for("chat", id=id))
         else:
