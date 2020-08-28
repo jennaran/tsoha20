@@ -36,7 +36,7 @@
 .view-left{
     float: left;
     padding: 20px;
-    width: 440px;
+    width: 425px;
     background: #f5eadb;
     height: 440px;
 }
@@ -50,7 +50,7 @@
     overflow: hidden;
     float: right;
     padding: 20px;
-    width: 220px;
+    width: 235px;
     background: #f5eadb;
     height: 440px;
 }
