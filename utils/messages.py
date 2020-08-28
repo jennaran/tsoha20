@@ -13,15 +13,10 @@ def get_messages(group_id):
 
 
 def send(content, group_id):
-    user_id = users.user_id()
-    try:
-        sql = "INSERT INTO messages (content, user_id, group_id, sent_at) " \
-              "VALUES (:content, :user_id, :group_id, NOW())"
-        db.session.execute(sql, {"content": content,
-                                 "user_id": user_id,
-                                 "group_id": group_id})
-        db.session.commit()
-    except():
-        return False
-    return True
+    sql = "INSERT INTO messages (content, user_id, group_id, sent_at) " \
+          "VALUES (:content, :user_id, :group_id, NOW())"
+    db.session.execute(sql, {"content": content,
+                             "user_id": users.user_id(),
+                             "group_id": group_id})
+    db.session.commit()
 

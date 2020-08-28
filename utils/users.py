@@ -36,18 +36,13 @@ def get_user():
 
 
 def delete():
-    id = user_id()
-    try:
-        sql = "DELETE FROM user_groups WHERE user_id=:id"
-        db.session.execute(sql, {"id": id})
-        db.session.commit()
-        sql = "DELETE FROM users WHERE id=:id"
-        db.session.execute(sql, {"id": id})
-        db.session.commit()
-        logout()
-    except:
-        return False
-    return True
+    sql1 = "DELETE FROM user_groups WHERE user_id=:id"
+    db.session.execute(sql1, {"id": user_id()})
+#    db.session.commit()
+    sql2 = "DELETE FROM users WHERE id=:id"
+    db.session.execute(sql2, {"id": user_id()})
+    db.session.commit()
+    logout()
 
 
 def logout():

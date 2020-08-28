@@ -90,10 +90,8 @@ def chat(id):
             return render_template("chat.html", name=name[0], messages=list, id=id, member=member)
         if request.method == "POST":
             content = request.form["content"]
-            if messages.send(content, id):
-                return redirect(url_for("chat", id=id))
-            else:
-                return render_template("error.html", message="Failed to send the message")
+            messages.send(content, id)
+            return redirect(url_for("chat", id=id))
 
 
 @app.route("/view/<int:id>")
@@ -113,10 +111,8 @@ def leave(id):
     if users.user_id() == 0:
         return redirect("/login")
     else:
-        if groups.leave_a_group(id):
-            return redirect("/")
-        else:
-            return render_template("error", message="Failed to leave the group")
+        groups.leave_a_group(id)
+        return redirect("/")
 
 
 @app.route("/delete")
@@ -124,10 +120,8 @@ def delete_user():
     if users.user_id() == 0:
         return redirect("/login")
     else:
-        if users.delete():
-            return redirect("/")
-        else:
-            return render_template("error.html", message="Failed to delete the user")
+        users.delete()
+        return redirect("/")
 
 
 @app.route("/join/<int:id>", methods=["POST"])
