@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}Chat{% endblock %}
+{% block title %}{{ name[0] }}{% endblock %}
 
 {% block head1 %}
 <link href="../static/chat.css" rel="stylesheet" type="text/css">
@@ -58,7 +58,7 @@
     <div class="body-bottom">
         <form action="/messages/{{ id }}" method="post">
             <div class="upload-btn">
-                <input type="text" name="content" placeholder="Type here...">
+                <input type="text" name="content" required="required" placeholder="Type here...">
                 <button class="btn-send" type="submit" value="send">Send</button>
             </div>
         </form>
