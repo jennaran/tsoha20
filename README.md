@@ -5,13 +5,13 @@ Sovellus on chatti-sovellus, jossa nimimerkkien takana olet käyttäjät voivat 
 
 ## Käyttäjä
 
-Käyttäjän tulee luoda tili. Tilin luomista varten kysytään käyttäjänimi ja salasana. Käyttäjänimen tulee olla uniikki ja salasanan pituudeltaan 8-128 merkkiä. ~~Käyttäjänimeä ja salasanaa voi myöhemmin vaihtaa.~~ Tilin voi halutessaan poistaa.
+Käyttäjän tulee luoda tili. Tilin luomista varten kysytään käyttäjänimi ja salasana. Käyttäjänimen tulee olla uniikki ja salasanan pituudeltaan 8-128 merkkiä.  Tilin voi halutessaan poistaa.
 
 ## Chatit
 
 ### Chatin luonti
 
-Käyttäjät voivat luoda chattejä. Chatin luojasta tulee automaattisesti chatin ylläpitäjä. Ylläpitäjällä on mahdollisuus poistaa ihmisiä chatistä. Chatin luomista varten tulee chatille valita nimi, lyhyt kuvaus, antaa aiheeseen viittaavia tägejä, joilla muut käyttäjät löytävät chatin ja päättää osallistujamäärä. Chatin nimi saa olla maksimissaan 40 merkkiä, kuvaus 300 merkkiä ja tägit 200 merkkiä yhteensä. Osallistujamäärän voi valita 2-200 osallistujan väliltä.  ~~Ylläpitäjä voi muokata kaikkia ominaisuuksia myöhemmin.~~ 
+Käyttäjät voivat luoda chattejä. Chatin luojasta tulee automaattisesti chatin ylläpitäjä. Ylläpitäjällä on mahdollisuus poistaa ihmisiä chatistä. Chatin luomista varten tulee chatille valita nimi, lyhyt kuvaus, antaa aiheeseen viittaavia tägejä, joilla muut käyttäjät löytävät chatin ja päättää osallistujamäärä. Chatin nimi saa olla maksimissaan 40 merkkiä, kuvaus 300 merkkiä ja tägit 200 merkkiä yhteensä. Osallistujamäärän voi valita 2-200 osallistujan väliltä.
 
 ### Chattien haku
 
