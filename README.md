@@ -11,7 +11,7 @@ Käyttäjän tulee luoda tili. Tilin luomista varten kysytään käyttäjänimi 
 
 ### Chatin luonti
 
-Käyttäjät voivat luoda chattejä. Chatin luojasta tulee automaattisesti chatin ylläpitäjä. ~~Ylläpitäjällä on mahdollisuus poistaa ihmisiä chatistä.~~ Chatin luomista varten tulee chatille valita nimi, lyhyt kuvaus, antaa aiheeseen viittaavia tägejä, joilla muut käyttäjät löytävät chatin ja päättää osallistujamäärä. Chatin nimi saa olla maksimissaan 40 merkkiä, kuvaus 300 merkkiä ja tägit 200 merkkiä yhteensä. Osallistujamäärän voi valita 2-200 osallistujan väliltä.  ~~Ylläpitäjä voi muokata kaikkia ominaisuuksia myöhemmin.~~ 
+Käyttäjät voivat luoda chattejä. Chatin luojasta tulee automaattisesti chatin ylläpitäjä. Ylläpitäjällä on mahdollisuus poistaa ihmisiä chatistä. Chatin luomista varten tulee chatille valita nimi, lyhyt kuvaus, antaa aiheeseen viittaavia tägejä, joilla muut käyttäjät löytävät chatin ja päättää osallistujamäärä. Chatin nimi saa olla maksimissaan 40 merkkiä, kuvaus 300 merkkiä ja tägit 200 merkkiä yhteensä. Osallistujamäärän voi valita 2-200 osallistujan väliltä.  ~~Ylläpitäjä voi muokata kaikkia ominaisuuksia myöhemmin.~~ 
 
 ### Chattien haku
 
