@@ -40,9 +40,10 @@ def get_user():
 def delete():
     sql1 = "DELETE FROM user_groups WHERE user_id=:id"
     db.session.execute(sql1, {"id": user_id()})
-#    db.session.commit()
-    sql2 = "DELETE FROM users WHERE id=:id"
+    sql2 = "DELETE FROM messages WHERE user_id=:id"
     db.session.execute(sql2, {"id": user_id()})
+    sql3 = "DELETE FROM users WHERE id=:id"
+    db.session.execute(sql3, {"id": user_id()})
     db.session.commit()
     logout()
 
