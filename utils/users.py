@@ -5,7 +5,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 
 def login(username, password):
-    sql = "SELECT password, id FROM users WHERE username=:username"
+    sql = "SELECT password, id FROM users WHERE username=:username AND active=true"
     result = db.session.execute(sql, {"username": username})
     user = result.fetchone()
     if user is None:
@@ -38,12 +38,14 @@ def get_user():
 
 
 def delete():
-    sql1 = "DELETE FROM user_groups WHERE user_id=:id"
-    db.session.execute(sql1, {"id": user_id()})
-    sql2 = "DELETE FROM messages WHERE user_id=:id"
+    sql1 = "DELETE FROM user_groups WHERE user_id=:id RETURNING group_id"
+    result = db.session.execute(sql1, {"id": user_id()})
+    group_id = result.fetchone()[0]
+    print("             ",group_id)
+    sql2 = "UPDATE users SET active = false WHERE id=:id"
     db.session.execute(sql2, {"id": user_id()})
-    sql3 = "DELETE FROM users WHERE id=:id"
-    db.session.execute(sql3, {"id": user_id()})
+    sql3 = "UPDATE groups SET is_full = false WHERE id=:id"
+    db.session.execute(sql3, {"id": group_id})
     db.session.commit()
     logout()
 
